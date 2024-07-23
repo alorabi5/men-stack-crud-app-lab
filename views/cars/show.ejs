@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= car.name %></title>
+</head>
+<body>
+    <a href="/cars/">Back to Cars</a>
+    <img src="<%= car.image %>" alt="<%= car.name %>">
+    <h1><%= car.name %></h1>
+    <form action="/cars/<%=car._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%= car.name %> </button>
+    </form>
+
+    <a href="/cars/<%=car._id%>/edit">Edit <%= car.name %></a>
+</body>
+</html>
